@@ -37,11 +37,10 @@ public class HttpOrigin {
                     Origin origin = new Origin();
                     origin.setOriginGroup(origineEthnic.get(0).text());
                     origin.setEthnicGroup(origine.text());
-                    System.err.println(origine.text() + " de " + origineEthnic.text());
                     origins.add(origin);
                 }
             }
         }
-        return null;
+        return origins;
     }
 }
