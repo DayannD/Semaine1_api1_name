@@ -10,15 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Getter @Setter @NoArgsConstructor @Entity
-public class Name {
+public class Origin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String name;
-    private String gender;
-    private String origin;
-    private String description;
-    private String link; // TODO : to remplace with description
-
+    private String originGroup;
+    private String ethnicGroup;
 }
