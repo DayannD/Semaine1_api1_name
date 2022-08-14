@@ -28,13 +28,12 @@ public class HttpNames {
     public List<Name> getNames (String htmlNamesPage){ // TODO : add origin as parameter
         Document doc = Jsoup.parseBodyFragment(htmlNamesPage);//Crée un document a partir de la page html
         List<Element> elements = doc.getElementsByClass("browsename");//
-        List<Name> namesList = new ArrayList<>();
+        List<Name> namesList = new ArrayList<>();// List afin de récupérer les noms
         for (Element el : elements){
-            Name name = new Name();
-            System.err.println(el);
-            name.setName(el.getElementsByClass("listname").get(0).text());
-            name.setLink(BEHIND_THE_NAME_URL + el.getElementsByClass("listname").get(0).select("a").attr("href"));
-            name.setGender(el.getElementsByClass("listgender").get(0).text());
+            Name name = new Name();// instanciation de mon Object
+            name.setName(el.getElementsByClass("listname").get(0).text());// récupération du nom
+            name.setLink(BEHIND_THE_NAME_URL + el.getElementsByClass("listname").get(0).select("a").attr("href"));// récupération et concaténation du lien vers les infos du nom
+            name.setGender(el.getElementsByClass("listgender").get(0).text());// récupration des genres
             name.setDescription(el.getElementsByClass("listusage").get(0).text());
             namesList.add(name);
         }

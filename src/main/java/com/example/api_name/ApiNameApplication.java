@@ -1,6 +1,7 @@
 package com.example.api_name;
 
 import com.example.http.HttpNames;
+import com.example.http.HttpOrigin;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -15,9 +16,9 @@ public class ApiNameApplication {
 
         SpringApplication.run(ApiNameApplication.class, args);
 
-        HttpNames httpOrigin = new HttpNames();
-        String page = httpOrigin.getHtmlNamesPage("berber");
-        httpOrigin.getNames(page);
+        HttpOrigin httpOrigin = new HttpOrigin();
+        String page = httpOrigin.getHtmlPageOrigin();
+        httpOrigin.getOrigin(page);
     }
 
 }
