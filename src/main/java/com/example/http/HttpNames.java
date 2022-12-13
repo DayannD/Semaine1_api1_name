@@ -18,7 +18,7 @@ public class HttpNames {
 
     private final RestTemplate restTemplate = new RestTemplateBuilder().build();// création de notre RestTemplate qui permet d'envoyer ou
                                                                                 // récupérer des données via requêtes HTTP
-    private final String BEHIND_THE_NAME_URL = "https://www.behindthename.com/";
+    private final String BEHIND_THE_NAME_URL = "https://www.behindthename.com";
 
     public String getHtmlNamesPage (String origin){
         String url = "https://www.behindthename.com/names/usage/" + origin;

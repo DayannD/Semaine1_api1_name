@@ -17,7 +17,6 @@ public class Name {
     private int id;
     private String name;
     private String gender;
-    private String origin;
     private String description;
     private String link; // TODO : to remplace with description
 
